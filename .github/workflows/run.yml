@@ -16,6 +16,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/users/1/gloomy.jp-baccho/web/test/
-          port: 2222
-          protocol: ftps
+          server-dir: /home/users/1/${{ secrets.FTP_SERVER }}/web/test/
+          port: 21
+          protocol: ftp
