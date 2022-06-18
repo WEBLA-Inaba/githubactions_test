@@ -15,3 +15,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/users/1/gloomy.jp-baccho/web/test/
           port: 2222
+          protocol: ftps
