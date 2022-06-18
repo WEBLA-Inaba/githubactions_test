@@ -5,10 +5,10 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - name: test event step
-      - run: echo "this is pen"
-      - uses: actions/checkout@v3
-      - run: |
-          ls -al
-          cd .github/workflows/
-          ls -al
+      name: test event step
+        - run: echo "this is pen"
+        - uses: actions/checkout@v3
+        - run: |
+            ls -al
+            cd .github/workflows/
+            ls -al
