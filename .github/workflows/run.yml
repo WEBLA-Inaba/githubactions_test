@@ -9,7 +9,7 @@ jobs:
         run: echo "this is pen"
       - name: Checkout@v3
         uses: actions/checkout@v3
-        - run: |
-            ls -al
-            cd .github/workflows/
-            ls -al
+        run: |
+          ls -al
+          cd .github/workflows/
+          ls -al
