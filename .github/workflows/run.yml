@@ -16,6 +16,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/users/1/${{ secrets.FTP_SERVER }}/web/test/
+          server-dir: ./test/
           port: 21
           protocol: ftp
