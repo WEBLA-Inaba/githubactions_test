@@ -10,7 +10,7 @@ jobs:
       - name: Use FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ssh422.lolipop.jp
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /home/users/1/gloomy.jp-baccho/web/test/
