@@ -1,16 +1,18 @@
-name: learn-github-actions
+name: LOLIPOP Auto Deploy
 on:
   push:
 jobs:
-  check-bats-version:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: test echo
-        run: echo "this is pen"
-      - name: Checkout@v3
+      - name: Use Checkout
         uses: actions/checkout@v3
-      - name: Exec Commands
-        run: |
-          ls -al
-          cd .github/workflows/
-          ls -al
+      - name: Use FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /home/users/1/gloomy.jp-baccho/web/test/
+          port: 2222
+          protocol: ftps
