@@ -8,7 +8,8 @@ jobs:
       - name: Use Checkout
         uses: actions/checkout@v3
       - name: Command Test
-        run: echo ${{ secrets.TEST }}
+        run: |
+            echo ${{ secrets.TEST }}
       - name: Use FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
